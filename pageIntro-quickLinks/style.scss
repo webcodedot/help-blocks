@@ -1,0 +1,111 @@
+
+/* Main block container */
+.page-intro-quick-links {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 30px; /* Adjust gap as needed */
+	padding: 25px 0 25px 0;
+	/* Remove comment for font-family to activate it */
+	/* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  }
+  
+  /* Styling the left column */
+  .left-column {
+	padding: 20px;
+	width: 50%; /* Default to 50% width */
+  }
+  
+  .left-column h2 {
+	margin-bottom: 1em;
+  }
+  
+  .left-column p {
+	margin-bottom: 1.5em;
+  }
+  
+  /* Updated button styling for increased border-radius */
+  .left-column a {
+	padding: 10px 35px;
+	border: none;
+	cursor: pointer;
+	border-radius: 30px;
+	text-decoration: none;
+	display: inline-block;
+	/* Additional styles for the left button */
+	color: #ffffff;
+  }
+  
+  /* Styling the right column */
+  .right-column {
+	flex-basis: 25%;
+	padding: 20px;
+	background-color: #7895d1;
+	border-radius: 5px;
+  }
+  
+  /* Styling the right column title */
+  .right-column h3 {
+	margin-bottom: 1em;
+	color: #ffffff; /* Default color for the right column title */
+  }
+  
+  .right-column ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .right-column li a {
+	display: block;
+	margin-bottom: 10px;
+	text-decoration: none;
+  }
+  
+  /* Style for the 'Add Link' button in the right column */
+  .right-column .add-link-button {
+	padding: 8px 16px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	background-color: transparent;
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 10px;
+  }
+  
+  .components-text-control__input {
+	width: auto !important;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+	/* Adjustments for tablet devices */
+	.page-intro-quick-links {
+	  padding: 50px;
+	}
+	.left-column, .right-column {
+	  width: 100%; /* Stack columns on smaller devices */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	/* Adjustments for smaller tablet and large mobile devices */
+	.page-intro-quick-links {
+	  flex-direction: column;
+	  padding: 30px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	/* Adjustments for mobile devices */
+	.page-intro-quick-links {
+	  padding: 20px;
+	}
+	.left-column a, .right-column .add-link-button {
+	  padding: 8px 16px; /* Smaller padding for smaller devices */
+	}
+	.left-column, .right-column {
+	  width: 100% !important; /* Force full width on smaller devices */
+	}
+  }
+  
