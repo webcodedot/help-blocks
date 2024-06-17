@@ -1,0 +1,53 @@
+.wp-block-older-people-gutenberg-blocks-split-hoz-multi {
+	max-width: 100%;
+}
+
+
+.split-hoz-multi-wrapper {
+	padding: 20px;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.split-hoz-main-container{
+	width: 70%;
+}
+
+.split-hoz-multi-item-container {
+	width: 60%;
+}
+
+.split-hoz-multi-main-title {
+	background: transparent;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.split-hoz-multi-box-main-title {
+	background: transparent;
+}
+
+.split-hoz-multi-box-main-des {
+	background: transparent;
+}
+
+@media (max-width: 800px) {
+	.wp-block-older-people-gutenberg-blocks-split-hoz-multi {
+		max-width: 100%;
+	}
+
+	.split-hoz-multi-wrapper {
+		background-size: cover;
+		display: contents;
+		}
+
+	.split-hoz-main-container{
+		width: 100%;
+	}
+
+	.split-hoz-multi-item-container {
+		width: 100%;
+	}
+}

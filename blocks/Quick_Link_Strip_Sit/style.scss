@@ -1,0 +1,86 @@
+/*
+* Style Works for both Editor and Frontend
+*/
+
+.wp-block-older-people-gutenberg-blocks-quick-link-strip-sit {
+	max-width: 100%;
+}
+
+.quick-link-strip-grid-container {
+	display: grid;
+	padding: 20px;
+	gap: 10px;
+}
+
+@media (max-width: 800px) {
+	.quick-link-strip-grid-container {
+		grid-template-columns: 100% !important;
+	}
+}
+
+.quick-link-strip-grid-container a {
+	text-decoration: none !important;
+}
+
+.quick-link-strip-grid-item {
+	padding: 20px;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	border-radius: 5px;
+}
+
+.quick-link-strip-grid-main-item {
+	padding: 20px;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	border-radius: 5px;
+}
+
+.quick-link-strip-grid-item:hover {
+	box-shadow:
+		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: #fff;
+}
+
+.quick-link-strip-title {
+	font-size: 17pt;
+	font-weight: 500;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.quick-link-strip-icon-style {
+	height: 26px;
+	width: 26px;
+	margin-bottom: 15px;
+}
+
+.quick-link-strip-title-child {
+	font-weight: 500;
+}
+
+.quick-link-strip-description {
+	font-weight: 400;
+}
+
+.quick-link-icon-component {
+	margin-bottom: 10px;
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+.quick-link-icon-container-child {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

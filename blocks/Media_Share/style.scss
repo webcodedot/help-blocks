@@ -1,0 +1,161 @@
+/*
+* Style Works for both Editor and Frontend
+*/
+
+.wp-block-older-people-gutenberg-blocks-media-share {
+	max-width: 100%;
+}
+
+.media-share-wrapper {
+	padding: 20px;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.media-share-text-container {
+	padding: 20px;
+	border-radius: 15px;
+	height: fit-content;
+	width: 60%;
+}
+
+// .container-item-flex-start {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: flex-start;
+// 	justify-content: center;
+// }
+
+// .container-item-flex-end {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+//     align-items: flex-start;
+// }
+
+.media-share-main-title {
+	background: transparent;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.media-share-main-container {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	border-radius: 25px;
+	justify-content: center;
+}
+
+.media-share-sub-title {
+	background: transparent;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.media-share-text-content {
+	font-size: 14px;
+	background: transparent;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.media-share-button-container {
+	display: flex;
+}
+
+.media-share-button1 {
+	padding: 10px 5px;
+	border-radius: 50px;
+	display: flex;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.media-share-button1-text {
+	background: transparent;
+	font-size: 14px;
+	text-align: center;
+	width: fit-content;
+	font-weight: 500;
+	text-decoration: none !important;
+}
+
+.media-share-button2 {
+	padding: 10px 0px;
+	border-radius: 50px;
+	display: flex;
+	cursor: pointer;
+}
+
+.media-share-button2-text {
+	background: transparent;
+	font-size: 14px;
+	text-align: center;
+	width: fit-content;
+	font-weight: 500;
+	text-decoration: none !important;
+}
+
+.media-share-video-container {
+	display: flex;
+	align-items: center;
+	padding: 20px 20px 20px 0;
+	width: 40%;
+	border-radius: 18px;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+@media (max-width: 650px) {
+	.media-share-main-container {
+		flex-direction: column;
+	}
+	.media-share-button-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.media-share-button1 {
+		padding: 10px 100px !important;
+	}
+	.media-share-text-container {
+		width: 100%;
+	}
+
+	.media-share-video-container {
+		width: 95%;
+		margin-top: -26px;
+        margin-left: 20px;
+	}
+	.media-share-button2 {
+		padding: 10px 80px !important;
+	}
+}
+
+@media (max-width: 800px) {
+	.media-share-main-title {
+		width: 100% !important;
+	}
+
+	.media-share-main-container {
+		width: 100% !important;
+	}
+	.media-share-button-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.media-share-button1 {
+		padding: 10px 100px !important;
+	}
+	.media-share-button2 {
+		padding: 10px 80px !important;
+	}
+	.media-share-video-container {
+		width: 95%;
+		margin-top: -26px;
+        margin-left: 20px;
+	}
+}
