@@ -1,0 +1,88 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/cta-strip",
+	"version": "1.0",
+	"title": "CTA strip",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "align-center",
+	"description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["full", "wide", "center", "left", "right"]
+	},
+	"attributes": {
+		"container_width": {
+			"type": "number",
+			"default": 100
+		},
+		"title_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"bg_image_url": {
+			"type": "string",
+			"default": ""
+		},
+		"background_color": {
+			"type": "string",
+			"default": "#AAC2E3"
+		},
+		"text_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"title_font_size": {
+			"type": "number",
+			"default": 16
+		},
+		"title_font_weight": {
+			"type": "number",
+			"default": 600
+		},
+		"text_font_size": {
+			"type": "number",
+			"default": 12
+		},
+		"text_font_weight": {
+			"type": "number",
+			"default": 400
+		},
+		"button_bg_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"button1_text_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"button2_text_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"button1_border_color": {
+			"type": "string",
+			"default": "#000"
+		},
+		"button2_border_color": {
+			"type": "string",
+			"default": "#fff"
+		},
+		"button1_link": {
+			"type": "string",
+			"default": ""
+		},
+		"button2_link": {
+			"type": "string",
+			"default": ""
+		},
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

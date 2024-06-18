@@ -1,0 +1,76 @@
+{
+    "apiVersion": 2,
+    "name": "older-people-gutenberg-blocks/quick-link-strip-sit",
+    "version": "1.0",
+    "title": "Quick Link Strip Sit",
+    "category": "older-people-gutenberg-blocks",
+    "icon": "admin-links",
+    "description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "align": ["full", "wide"]
+    },
+    "attributes": {
+        "number_of_columns": {
+            "type": "number",
+            "default": 3
+        },
+        "background_color": {
+            "type": "string",
+            "default": "#AAC2E3"
+        },
+        "main_title": {
+            "type": "string",
+            "default": ""
+        },
+        "main_title_color": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "main_title_font_size": {
+            "type": "number",
+            "default": 22
+        },
+        "main_title_font_weight": {
+            "type": "number",
+            "default": 600
+        },
+        "data_array": {
+            "type": "array",
+            "default": []
+        },
+        "column_title_color": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "description_color": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "column_title_font_size": {
+            "type": "number",
+            "default": 20
+        },
+        "description_font_size": {
+            "type": "number",
+            "default": 17
+        },
+        "column_title_font_weight": {
+            "type": "number",
+            "default": 600
+        },
+        "description_font_weight": {
+            "type": "number",
+            "default": 400
+        },
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+    },
+    "textdomain": "older-people-gutenberg-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

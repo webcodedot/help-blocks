@@ -1,0 +1,104 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/x-col-card-image",
+	"version": "1.0",
+	"title": "X Col Card Image",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "",
+	"description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+	"supports": {
+		"html": false,
+		"anchor": true,
+        "align": ["full", "wide"]
+	},
+	"attributes": {
+		"container_width": {
+			"type": "number",
+			"default": 100
+		},
+		"number_of_columns":{
+			"type": "number",
+			"default": 2
+		},
+		"grid_container_background_color":{
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"image_height":{
+			"type":"number",
+			"default":"300"
+		},
+		"main_title": {
+			"type": "string",
+			"default": ""
+		},
+		"data_array": {
+			"type": "array",
+			"default": []
+		},
+		"main_container_background_color":{
+			"type":"string",
+			"default": "#FFEFE0"
+		},
+		"main_title_text_color":{
+			"type":"string",
+			"default": "#000000"
+		},
+		"main_title_font_size":{
+			"type":"number",
+			"default": 22
+		},
+		"main_title_font_weight":{
+			"type":"number",
+			"default": 800
+		},
+		"sub_title_text_color":{
+			"type":"string",
+			"default": "#000000"
+		},
+		"sub_title_font_size":{
+			"type":"number",
+			"default": 20
+		},
+		"sub_title_font_weight":{
+			"type":"number",
+			"default": 600
+		},
+		"description_text_color":{
+			"type":"string",
+			"default": "#000000"
+		},
+		"description_font_size":{
+			"type":"number",
+			"default": 17
+		},
+		"description_font_weight":{
+			"type":"number",
+			"default": 400
+		},
+		"button_background_color":{
+			"type":"string",
+			"default": "#040B5B"
+		},
+		"button_text_color":{
+			"type":"string",
+			"default":"#ffff"
+		},
+		"button_text_font_size":{
+			"type":"number",
+			"default": 17
+		},
+		"button_font_weight":{
+			"type":"number",
+			"default":400
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

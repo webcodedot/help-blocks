@@ -1,0 +1,80 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/split-hoz-multi",
+	"version": "1.0",
+	"title": "Split Hoz Multi",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "",
+	"description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["full", "wide"]
+	},
+	"attributes": {
+		"container_width": {
+			"type": "number",
+			"default": 70
+		},
+		"data_array": {
+			"type": "array",
+			"default": []
+		},
+		"bg_image_url": {
+			"type": "string",
+			"default": ""
+		},
+		"main_title": {
+			"type": "string",
+			"default": ""
+		},
+		"main_title_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"main_title_font_size": {
+			"type": "number",
+			"default": 22
+		},
+		"main_title_font_weight": {
+			"type": "number",
+			"default": 700
+		},
+		"box_bg_color": {
+			"type": "string",
+			"default": "#FFEFE0"
+		},
+		"box_title_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"box_title_font_size": {
+			"type": "number",
+			"default": 20
+		},
+		"box_title_font_weight": {
+			"type": "number",
+			"default": 700
+		},
+		"box_description_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"box_description_font_size": {
+			"type": "number",
+			"default": 17
+		},
+		"box_description_font_weight": {
+			"type": "number",
+			"default": 400
+		},
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

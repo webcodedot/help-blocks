@@ -1,0 +1,115 @@
+/*
+* Style Works for both Editor and Frontend
+*/
+
+.wp-block-older-people-gutenberg-blocks-image-left-text-right-bg {
+	max-width: 100%;
+}
+
+.image-left-text-right-bg-image-wrapper {
+	padding: 20px;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.image-left-text-right-bg-image-container {
+}
+
+.image-left-text-right-bg-text-container {
+	padding: 40px 20px;
+	margin-left: 20px;
+	border-radius: 15px;
+	height: fit-content;
+}
+
+.container-item-flex-start {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.container-item-flex-end {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-left-text-right-bg-main-title {
+	background: transparent;
+	font-size: 24px;
+	font-weight: bold;
+	max-width: 50%;
+}
+
+.image-left-text-right-bg-main-container {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.image-left-text-right-bg-sub-title {
+	background: transparent;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.image-left-text-right-bg-text-content {
+	font-size: 14px;
+	background: transparent;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.image-left-text-right-bg-button {
+	padding: 10px 30px;
+	border-radius: 50px;
+	display: flex;
+}
+
+.image-left-text-right-bg-button-text {
+	background: transparent;
+	font-size: 17px;
+	text-align: center;
+	font-weight: 500;
+	text-decoration: none !important;
+}
+
+@media (max-width: 850px) {
+	.image-left-text-right-bg-main-title {
+		text-align: center;
+	}
+
+	.image-left-text-right-bg-main-container {
+		flex-direction: column;
+	}
+
+	.image-left-text-right-bg-text-container {
+		width: 100% !important;
+		box-sizing: border-box;
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.image-left-text-right-bg-main-title {
+		text-align: center;
+		width: 100% !important;
+	}
+
+	.image-left-text-right-bg-main-container {
+		width: 100% !important;
+		flex-direction: column;
+	}
+
+	.image-left-text-right-bg-text-container {
+		width: 100% !important;
+		box-sizing: border-box;
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/topic-carousel",
+	"version": "1.0",
+	"title": "Topic Carousel",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "slides",
+	"description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["full", "wide", "center", "left", "right"]
+	},
+	"attributes": {
+		"container_width": {
+			"type": "number",
+			"default": 70
+		},
+		"mainTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"mainTitleColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"mainTitleWeight": {
+			"type": "string",
+			"default": "600"
+		},
+		"mainTitleFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"boxArray": {
+			"type": "array",
+			"default": []
+		},
+		"boxColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"titleWeight": {
+			"type": "string",
+			"default": "600"
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"desColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"desWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"desFontSize": {
+			"type": "number",
+			"default": 14
+		},
+		"buttonBGColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"buttonTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"buttonTextWeight": {
+			"type": "string",
+			"default": "600"
+		},
+		"buttonTextFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}	

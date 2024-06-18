@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "older-people-gutenberg-blocks/page-header-home",
+	"version": "0.1.0",
+	"title": "Page Header Home/page header-sub",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "heading",
+	"description": "Older people is a banner block",
+	"example": {},
+	"supports": {
+		"color": {
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
+		"align": true,
+		"html": false
+	},
+	"attributes": {
+		"bg_image_url": {
+			"type": "string",
+			"default": ""
+		},
+        "imageUrl": {
+            "type": "string"
+        },
+		"margin_right": {
+			"type": "number",
+			"default": 15
+		},
+		"margin_bottom": {
+			"type": "number",
+			"default": 15
+		}
+    
+    },
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
