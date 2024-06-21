@@ -69,6 +69,10 @@ export default function Edit({ attributes, setAttributes }) {
         setSelectedElement('boxDescription');
     };
 
+    const handleReturnToBlockSettingsClick = () => {
+        setSelectedElement(null);
+    };
+
     const removeBackgroundImage = () => {
         setAttributes({ bg_image_url: null });
     };
@@ -82,154 +86,185 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <Fragment>
             <InspectorControls>
-                <PanelBody
-                    title={__('Block Settings', 'older-people-gutenberg-blocks')}
-                    initialOpen={true}
-                >
-                    <p className="custom__editor__label">
-                        {__('Background Image', 'older-people-gutenberg-blocks-image')}
-                    </p>
-                    <MediaUpload
-                        onSelect={(media) => setAttributes({ bg_image_url: media.url })}
-                        render={({ open }) => (
-                            <Button
-                                isSecondary
-                                style={{ marginBottom: '10px' }}
-                                onClick={open}
-                            >
-                                {__('Select Image', 'older-people-gutenberg-blocks')}
-                            </Button>
-                        )}
-                    />
-                    {(bg_image_url || bg_image_url === null) ? (
-                        <>
-                            <img
-                                src={bg_image_url ? bg_image_url : defaultBgImage}
-                                style={{ marginBottom: 20 }}
-                                alt={__('Selected Image', 'older-people-gutenberg-blocks')}
+                {selectedElement !== 'mainTitle' && selectedElement !== 'boxTitle' && selectedElement !== 'boxDescription' && (
+                    <>
+                        <PanelBody
+                            title={__('Block Settings', 'older-people-gutenberg-blocks')}
+                            initialOpen={true}
+                        >
+                            <p className="custom__editor__label">
+                                {__('Background Image', 'older-people-gutenberg-blocks-image')}
+                            </p>
+                            <MediaUpload
+                                onSelect={(media) => setAttributes({ bg_image_url: media.url })}
+                                render={({ open }) => (
+                                    <Button
+                                        isSecondary
+                                        style={{ marginBottom: '10px' }}
+                                        onClick={open}
+                                    >
+                                        {__('Select Image', 'older-people-gutenberg-blocks')}
+                                    </Button>
+                                )}
                             />
-                            <Button
-                                isSecondary
-                                style={{ marginBottom: '10px' }}
-                                onClick={removeBackgroundImage}
-                            >
-                                {__('Remove Image', 'older-people-gutenberg-blocks')}
-                            </Button>
-                        </>
-                    ) : (
-                        <img
-                            src={defaultBgImage}
-                            style={{ marginBottom: 20 }}
-                            alt="Default Background"
+                            {(bg_image_url || bg_image_url === null) ? (
+                                <>
+                                    <img
+                                        src={bg_image_url ? bg_image_url : defaultBgImage}
+                                        style={{ marginBottom: 20 }}
+                                        alt={__('Selected Image', 'older-people-gutenberg-blocks')}
+                                    />
+                                    <Button
+                                        isSecondary
+                                        style={{ marginBottom: '10px' }}
+                                        onClick={removeBackgroundImage}
+                                    >
+                                        {__('Remove Image', 'older-people-gutenberg-blocks')}
+                                    </Button>
+                                </>
+                            ) : (
+                                <img
+                                    src={defaultBgImage}
+                                    style={{ marginBottom: 20 }}
+                                    alt="Default Background"
+                                />
+                            )}
+                        </PanelBody>
+                        <PanelBody
+                            title={__('Box Background Settings', 'older-people-gutenberg-blocks')}
+                            initialOpen={true}
+                        >
+                            <PanelColorSettings
+                                title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                                initialOpen={true}
+                                colorSettings={[
+                                    {
+                                        value: box_bg_color,
+                                        onChange: (color) => setAttributes({ box_bg_color: color }),
+                                        label: __('Box Background Color', 'older-people-gutenberg-blocks'),
+                                    },
+                                ]}
+                            />
+                        </PanelBody>
+                    </>
+                )}
+                {selectedElement === 'mainTitle' && (
+                    <PanelBody
+                        title={__('Main Title Settings', 'older-people-gutenberg-blocks')}
+                        initialOpen={true}
+                    >
+                        <Button
+                            isSecondary
+                            onClick={handleReturnToBlockSettingsClick}
+                            style={{ marginBottom: '10px' }}
+                        >
+                            {__('Return to Block Settings', 'older-people-gutenberg-blocks')}
+                        </Button>
+                        <PanelColorSettings
+                            title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                            initialOpen={true}
+                            colorSettings={[
+                                {
+                                    value: main_title_color,
+                                    onChange: (color) => setAttributes({ main_title_color: color }),
+                                    label: __('Headline Color', 'older-people-gutenberg-blocks'),
+                                },
+                            ]}
                         />
-                    )}
-                </PanelBody>
-                <PanelBody
-                    title={__('Box Background Settings', 'older-people-gutenberg-blocks')}
-                    initialOpen={true}
-                >
-                    <PanelColorSettings
-                        title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                        <FontSizePicker
+                            value={main_title_font_size}
+                            onChange={(size) => setAttributes({ main_title_font_size: size })}
+                            fontSizes={fontSizes}
+                        />
+                        <SelectControl
+                            label={__('Font Weight', 'older-people-gutenberg-blocks')}
+                            value={main_title_font_weight}
+                            options={[
+                                { label: 'Normal', value: 'normal' },
+                                { label: 'Bold', value: 'bold' },
+                            ]}
+                            onChange={(value) => setAttributes({ main_title_font_weight: value })}
+                        />
+                    </PanelBody>
+                )}
+                {selectedElement === 'boxTitle' && (
+                    <PanelBody
+                        title={__('Box Title Settings', 'older-people-gutenberg-blocks')}
                         initialOpen={true}
-                        colorSettings={[
-                            {
-                                value: box_bg_color,
-                                onChange: (color) => setAttributes({ box_bg_color: color }),
-                                label: __('Box Background Color', 'older-people-gutenberg-blocks'),
-                            },
-                        ]}
-                    />
-                </PanelBody>
-                <PanelBody
-                    title={__('Main Title Settings', 'older-people-gutenberg-blocks')}
-                    initialOpen={selectedElement === 'mainTitle'}
-                >
-                    <PanelColorSettings
-                        title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                    >
+                        <Button
+                            isSecondary
+                            onClick={handleReturnToBlockSettingsClick}
+                            style={{ marginBottom: '10px' }}
+                        >
+                            {__('Return to Block Settings', 'older-people-gutenberg-blocks')}
+                        </Button>
+                        <PanelColorSettings
+                            title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                            initialOpen={true}
+                            colorSettings={[
+                                {
+                                    value: box_title_color,
+                                    onChange: (color) => setAttributes({ box_title_color: color }),
+                                    label: __('Box Title Color', 'older-people-gutenberg-blocks'),
+                                },
+                            ]}
+                        />
+                        <FontSizePicker
+                            value={box_title_font_size}
+                            onChange={(size) => setAttributes({ box_title_font_size: size })}
+                            fontSizes={fontSizes}
+                        />
+                        <SelectControl
+                            label={__('Font Weight', 'older-people-gutenberg-blocks')}
+                            value={box_title_font_weight}
+                            options={[
+                                { label: 'Normal', value: 'normal' },
+                                { label: 'Bold', value: 'bold' },
+                            ]}
+                            onChange={(value) => setAttributes({ box_title_font_weight: value })}
+                        />
+                    </PanelBody>
+                )}
+                {selectedElement === 'boxDescription' && (
+                    <PanelBody
+                        title={__('Box Description Settings', 'older-people-gutenberg-blocks')}
                         initialOpen={true}
-                        colorSettings={[
-                            {
-                                value: main_title_color,
-                                onChange: (color) => setAttributes({ main_title_color: color }),
-                                label: __('Headline Color', 'older-people-gutenberg-blocks'),
-                            },
-                        ]}
-                    />
-                    <FontSizePicker
-                        value={main_title_font_size}
-                        onChange={(size) => setAttributes({ main_title_font_size: size })}
-                        fontSizes={fontSizes}
-                    />
-                    <SelectControl
-                        label={__('Font Weight', 'older-people-gutenberg-blocks')}
-                        value={main_title_font_weight}
-                        options={[
-                            { label: 'Normal', value: 'normal' },
-                            { label: 'Bold', value: 'bold' },
-                        ]}
-                        onChange={(value) => setAttributes({ main_title_font_weight: value })}
-                    />
-                </PanelBody>
-                <PanelBody
-                    title={__('Box Title Settings', 'older-people-gutenberg-blocks')}
-                    initialOpen={selectedElement === 'boxTitle'}
-                >
-                    <PanelColorSettings
-                        title={__('Color Settings', 'older-people-gutenberg-blocks')}
-                        initialOpen={true}
-                        colorSettings={[
-                            {
-                                value: box_title_color,
-                                onChange: (color) => setAttributes({ box_title_color: color }),
-                                label: __('Box Title Color', 'older-people-gutenberg-blocks'),
-                            },
-                        ]}
-                    />
-                    <FontSizePicker
-                        value={box_title_font_size}
-                        onChange={(size) => setAttributes({ box_title_font_size: size })}
-                        fontSizes={fontSizes}
-                    />
-                    <SelectControl
-                        label={__('Font Weight', 'older-people-gutenberg-blocks')}
-                        value={box_title_font_weight}
-                        options={[
-                            { label: 'Normal', value: 'normal' },
-                            { label: 'Bold', value: 'bold' },
-                        ]}
-                        onChange={(value) => setAttributes({ box_title_font_weight: value })}
-                    />
-                </PanelBody>
-                <PanelBody
-                    title={__('Box Description Settings', 'older-people-gutenberg-blocks')}
-                    initialOpen={selectedElement === 'boxDescription'}
-                >
-                    <PanelColorSettings
-                        title={__('Color Settings', 'older-people-gutenberg-blocks')}
-                        initialOpen={true}
-                        colorSettings={[
-                            {
-                                value: box_description_color,
-                                onChange: (color) => setAttributes({ box_description_color: color }),
-                                label: __('Box Description Color', 'older-people-gutenberg-blocks'),
-                            },
-                        ]}
-                    />
-                    <FontSizePicker
-                        value={box_description_font_size}
-                        onChange={(size) => setAttributes({ box_description_font_size: size })}
-                        fontSizes={fontSizes}
-                    />
-                    <SelectControl
-                        label={__('Font Weight', 'older-people-gutenberg-blocks')}
-                        value={box_description_font_weight}
-                        options={[
-                            { label: 'Normal', value: 'normal' },
-                            { label: 'Bold', value: 'bold' },
-                        ]}
-                        onChange={(value) => setAttributes({ box_description_font_weight: value })}
-                    />
-                </PanelBody>
+                    >
+                        <Button
+                            isSecondary
+                            onClick={handleReturnToBlockSettingsClick}
+                            style={{ marginBottom: '10px' }}
+                        >
+                            {__('Return to Block Settings', 'older-people-gutenberg-blocks')}
+                        </Button>
+                        <PanelColorSettings
+                            title={__('Color Settings', 'older-people-gutenberg-blocks')}
+                            initialOpen={true}
+                            colorSettings={[
+                                {
+                                    value: box_description_color,
+                                    onChange: (color) => setAttributes({ box_description_color: color }),
+                                    label: __('Box Description Color', 'older-people-gutenberg-blocks'),
+                                },
+                            ]}
+                        />
+                        <FontSizePicker
+                            value={box_description_font_size}
+                            onChange={(size) => setAttributes({ box_description_font_size: size })}
+                            fontSizes={fontSizes}
+                        />
+                        <SelectControl
+                            label={__('Font Weight', 'older-people-gutenberg-blocks')}
+                            value={box_description_font_weight}
+                            options={[
+                                { label: 'Normal', value: 'normal' },
+                                { label: 'Bold', value: 'bold' },
+                            ]}
+                            onChange={(value) => setAttributes({ box_description_font_weight: value })}
+                        />
+                    </PanelBody>
+                )}
             </InspectorControls>
             <div {...blockProps}>
                 <div
